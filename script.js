@@ -1,4 +1,5 @@
-require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "dojo/domReady!"], function (esriConfig, Map, MapView, FeatureLayer) {
+require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "dojo/domReady!",
+"esri/widgets/Legend"], function (esriConfig, Map, MapView, FeatureLayer, Legend) {
 
 esriConfig.apiKey =  "AAPK6221ccc708944717801b1e737e84e229ARkRORCTCsMHPkG82l8m647wlPBVSru5T3Z9cJ0JjaSyfYk-s0mQw-UiHP3Xv8jT"; 
   
@@ -41,5 +42,21 @@ map.add(metrolayer);
         }
       }
     };
+  
+ // legend.basemapLegendVisible = true;
+  
+  legend.respectLayerVisibility = false;
+  
+  var legend = new Legend({
+  view: view,
+  layerInfos: [{
+    layer: featureLayer,
+    title: "Legend"
+  }]
+});
+
+view.ui.add(legend, "top-right");
+  
+  // Legend will not work, tried enabling visibility
   
 });
