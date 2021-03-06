@@ -50,13 +50,13 @@ map.add(metrolayer);
   var legend = new Legend({
   view: view,
   layerInfos: [{
-    layer: featureLayer,
+    layer: (metrolayer, countyprklayer),
     title: "Legend"
   }]
 });
-
+  
 view.ui.add(legend, "top-right");
   
-  // Legend will not work, tried enabling visibility
+  // Legend will not work still
   
 });
