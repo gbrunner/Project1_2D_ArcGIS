@@ -1,5 +1,5 @@
-require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "dojo/domReady!",
-"esri/widgets/Legend"], function (esriConfig, Map, MapView, FeatureLayer, Legend) {
+require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Legend","dojo/domReady!"
+], function (esriConfig, Map, MapView, FeatureLayer, Legend) {
 
 esriConfig.apiKey =  "AAPK6221ccc708944717801b1e737e84e229ARkRORCTCsMHPkG82l8m647wlPBVSru5T3Z9cJ0JjaSyfYk-s0mQw-UiHP3Xv8jT"; 
   
